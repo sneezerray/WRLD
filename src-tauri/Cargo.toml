@@ -1,0 +1,18 @@
+[package]
+name = "wrld-browser"
+version = "0.1.0"
+description = "WRLD Browser - A lightweight, privacy-focused desktop browser"
+authors = ["You"]
+license = "MIT"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1.5", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+tauri = { version = "1.5", features = ["shell-open", "shell-execute", "process-command-api"] }
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
