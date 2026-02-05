@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools | WRLD Browser</title>
+    <link rel="stylesheet" href="../styles/ai-tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="ai-tools-container">
+        <header class="ai-header">
+            <h1><i class="fas fa-robot"></i> AI Tools</h1>
+            <p class="ai-subtitle">Free, privacy-focused AI tools running locally or through free APIs</p>
+            
+            <div class="ai-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="ai-search" placeholder="Search AI tools..." autocomplete="off">
+                </div>
+                
+                <div class="category-tabs" id="category-tabs">
+                    <button class="cat-btn active" data-category="all">All</button>
+                    <button class="cat-btn" data-category="writing">Writing</button>
+                    <button class="cat-btn" data-category="design">Design</button>
+                    <button class="cat-btn" data-category="code">Code</button>
+                    <button class="cat-btn" data-category="audio">Audio</button>
+                    <button class="cat-btn" data-category="study">Study</button>
+                </div>
+            </div>
+        </header>
+        
+        <main class="ai-main">
+            <!-- Pinned Tools -->
+            <section class="pinned-section" id="pinned-section" style="display: none;">
+                <h2 class="section-title"><i class="fas fa-thumbtack"></i> Pinned Tools</h2>
+                <div class="tools-grid" id="pinned-tools"></div>
+            </section>
+            
+            <!-- All Tools -->
+            <section class="all-tools">
+                <h2 class="section-title" id="current-category">All AI Tools</h2>
+                <div class="tools-grid" id="tools-grid">
+                    <!-- Tools will be loaded here by JavaScript -->
+                </div>
+            </section>
+        </main>
+        
+        <footer class="ai-footer">
+            <div class="footer-info">
+                <span class="status"><i class="fas fa-circle" style="color: #28ca42;"></i> Local models ready</span>
+                <span class="count" id="tools-count">Loading tools...</span>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Tool Modal -->
+    <div class="tool-modal" id="tool-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Tool Name</h2>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                Loading tool information...
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-pin" id="modal-pin-btn">
+                    <i class="fas fa-thumbtack"></i> Pin
+                </button>
+                <button class="btn btn-open" id="modal-open-btn">
+                    <i class="fas fa-external-link-alt"></i> Open Tool
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../scripts/ai-tools.js"></script>
+</body>
+</html>
