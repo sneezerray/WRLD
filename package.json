@@ -1,0 +1,18 @@
+{
+  "name": "wrld-browser",
+  "version": "1.0.0",
+  "description": "A lightweight, privacy-focused desktop browser",
+  "main": "src/index.html",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "tauri": "tauri"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.5.0"
+  },
+  "keywords": ["browser", "privacy", "lightweight", "tauri"],
+  "author": "",
+  "license": "MIT"
+}
