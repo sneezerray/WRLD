@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRLD Browser</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="browser-container">
+        <div class="top-bar">
+            <div class="window-controls">
+                <button class="win-btn close"><i class="fas fa-times"></i></button>
+                <button class="win-btn minimize"><i class="fas fa-minus"></i></button>
+                <button class="win-btn maximize"><i class="fas fa-square"></i></button>
+            </div>
+            
+            <div class="url-container">
+                <button class="nav-btn" id="back-btn"><i class="fas fa-arrow-left"></i></button>
+                <button class="nav-btn" id="forward-btn"><i class="fas fa-arrow-right"></i></button>
+                <button class="nav-btn" id="refresh-btn"><i class="fas fa-redo"></i></button>
+                
+                <div class="url-input-wrapper">
+                    <i class="fas fa-search url-icon"></i>
+                    <input type="text" id="url-input" placeholder="Search or enter URL...">
+                    <button class="go-btn" id="go-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+                <button class="ai-btn" id="ai-btn">
+                    <i class="fas fa-robot"></i>
+                    <span>AI</span>
+                </button>
+            </div>
+            
+            <div class="user-menu">
+                <button class="menu-btn" id="bookmarks-btn"><i class="fas fa-bookmark"></i></button>
+                <button class="menu-btn" id="settings-btn"><i class="fas fa-cog"></i></button>
+            </div>
+        </div>
+        
+        <div class="main-area">
+            <div class="sidebar">
+                <div class="logo">
+                    <h1><i class="fas fa-globe-americas"></i> WRLD</h1>
+                </div>
+                
+                <nav class="side-nav">
+                    <a href="#" class="nav-item active" data-page="home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="browse">
+                        <i class="fas fa-compass"></i>
+                        <span>Browse</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="ai-tools">
+                        <i class="fas fa-robot"></i>
+                        <span>AI Tools</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="bookmarks">
+                        <i class="fas fa-bookmark"></i>
+                        <span>Bookmarks</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </nav>
+                
+                <div class="sidebar-footer">
+                    <button class="new-tab" id="new-tab-btn">
+                        <i class="fas fa-plus"></i>
+                        New Tab
+                    </button>
+                </div>
+            </div>
+            
+            <div class="content" id="content-area">
+                <!-- Content loads here -->
+                <div class="welcome-screen">
+                    <div class="welcome-logo">
+                        <h1>🌐 WRLD</h1>
+                        <p class="tagline">Lightweight • Private • Free</p>
+                    </div>
+                    
+                    <div class="quick-actions">
+                        <div class="quick-card" data-page="browse">
+                            <i class="fas fa-search"></i>
+                            <h3>Browse Web</h3>
+                            <p>Start browsing privately</p>
+                        </div>
+                        
+                        <div class="quick-card" data-page="ai-tools">
+                            <i class="fas fa-robot"></i>
+                            <h3>AI Tools</h3>
+                            <p>Free AI-powered tools</p>
+                        </div>
+                        
+                        <div class="quick-card" data-page="bookmarks">
+                            <i class="fas fa-bookmark"></i>
+                            <h3>Bookmarks</h3>
+                            <p>Your saved pages</p>
+                        </div>
+                        
+                        <div class="quick-card" data-page="settings">
+                            <i class="fas fa-cog"></i>
+                            <h3>Settings</h3>
+                            <p>Customize your browser</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/main.js"></script>
+</body>
+</html>
